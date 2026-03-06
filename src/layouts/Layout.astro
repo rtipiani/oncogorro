@@ -33,14 +33,13 @@ const { title, description = "Enfoque especializado en el cuidado capilar oncol√
 			// Define a function to initialize our scripts so we can run them on load
 			function initScripts() {
 				// Smooth Scrolling for Anchors
-				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					// Remove existing listeners if any to prevent duplicates during re-renders
-					const newAnchor = anchor.cloneNode(true);
-					anchor.parentNode?.replaceChild(newAnchor, anchor);
+				document.body.addEventListener('click', function(e) {
+					const target = e.target as HTMLElement;
+					const anchor = target.closest('a[href^="#"]') as HTMLAnchorElement;
 					
-					newAnchor.addEventListener('click', function(e) {
+					if (anchor) {
 						e.preventDefault();
-						const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+						const targetId = anchor.getAttribute('href');
 						if(!targetId || targetId === '#') return;
 						
 						const targetElement = document.querySelector(targetId);
@@ -51,7 +50,7 @@ const { title, description = "Enfoque especializado en el cuidado capilar oncol√
 							});
 							history.pushState(null, '', targetId);
 						}
-					});
+					}
 				});
 
 				// Intersection Observer for scroll animations
