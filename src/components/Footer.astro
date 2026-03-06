@@ -12,39 +12,76 @@
     </div>
 </section>
 
-<footer class="bg-white pt-16 pb-8 px-[5%] border-t border-black/5">
-    <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-8 mb-12">
-        <div class="max-w-[350px]">
-            <a href="#" class="logo text-text flex items-center gap-1 text-3xl font-heading font-semibold mb-4 tracking-tight">
-                <span class="text-[#A5C94B]">Onco</span><span class="font-bold text-[#5DA5DA] drop-shadow-sm">gorro</span>
-            </a>
-            <p class="text-sm text-text-light leading-relaxed">Desarrollamos soluciones accesibles de enfriamiento capilar para pacientes oncológicos.</p>
-        </div>
-        <div class="flex flex-col gap-4">
-            <a href="#inicio" class="text-text-light hover:text-primary transition-colors font-medium">Inicio</a>
-            <a href="#historia" class="text-text-light hover:text-primary transition-colors font-medium">Historia</a>
-            <a href="#soluciones" class="text-text-light hover:text-primary transition-colors font-medium">Soluciones</a>
-            <a href="#investigacion" class="text-text-light hover:text-primary transition-colors font-medium">I+D</a>
-            <a href="#faq" class="text-text-light hover:text-primary transition-colors font-medium">FAQ</a>
-        </div>
-        <div class="flex flex-col gap-4">
-            <div class="flex gap-4">
-                <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-text hover:bg-primary hover:text-white transition-colors" aria-label="WhatsApp">
-                    <i class="ph ph-whatsapp-logo text-xl"></i>
+<footer class="bg-white border-t border-black/5 relative overflow-hidden">
+    <!-- Subtle background gradient accent -->
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+
+    <div class="max-w-[1200px] mx-auto px-[5%] pt-20 pb-12 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+            <!-- Brand Column -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <a href="#" class="logo text-text flex items-center gap-1 text-3xl font-heading font-semibold tracking-tight inline-block mb-2">
+                    <span class="text-[#A5C94B]">Onco</span><span class="font-bold text-[#5DA5DA] drop-shadow-sm">gorro</span>
                 </a>
-                <a href="https://www.instagram.com/oncogorro.peru?igsh=MWJhMXpidHJuODFp&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-text hover:bg-primary hover:text-white transition-colors" aria-label="Instagram">
-                    <i class="ph ph-instagram-logo text-xl"></i>
-                </a>
-                <a href="https://www.facebook.com/share/1HNNc1PcAM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-text hover:bg-primary hover:text-white transition-colors" aria-label="Facebook">
-                    <i class="ph ph-facebook-logo text-xl"></i>
-                </a>
+                <p class="text-[1.05rem] text-text-light leading-relaxed pr-4">
+                    Desarrollamos soluciones accesibles de enfriamiento capilar para pacientes oncológicos, brindando acompañamiento durante todo el tratamiento.
+                </p>
+                <div class="flex gap-3 mt-2">
+                    <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-bg border border-black/5 flex items-center justify-center text-text-light hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300 shadow-sm" aria-label="WhatsApp">
+                        <i class="ph ph-whatsapp-logo text-[1.35rem]"></i>
+                    </a>
+                    <a href="https://www.instagram.com/oncogorro.peru?igsh=MWJhMXpidHJuODFp&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-bg border border-black/5 flex items-center justify-center text-text-light hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white hover:border-transparent transition-all duration-300 shadow-sm" aria-label="Instagram">
+                        <i class="ph ph-instagram-logo text-[1.35rem]"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1HNNc1PcAM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-bg border border-black/5 flex items-center justify-center text-text-light hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 shadow-sm" aria-label="Facebook">
+                        <i class="ph ph-facebook-logo text-[1.35rem]"></i>
+                    </a>
+                </div>
             </div>
-            <a href="mailto:contacto@oncogorroperu.com" class="flex items-center gap-2 text-text-light hover:text-primary transition-colors font-medium">
-                <i class="ph ph-envelope-simple text-xl"></i> contacto@oncogorroperu.com
-            </a>
+
+            <!-- Links Column -->
+            <div class="lg:col-span-3 lg:col-start-6 flex flex-col gap-5">
+                <h4 class="text-sm font-bold text-text uppercase tracking-widest mb-2 font-heading">Explorar</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#inicio" class="text-[1.05rem] text-text-light hover:text-primary transition-colors inline-flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors"></span> Inicio</a></li>
+                    <li><a href="#historia" class="text-[1.05rem] text-text-light hover:text-primary transition-colors inline-flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors"></span> Historia</a></li>
+                    <li><a href="#soluciones" class="text-[1.05rem] text-text-light hover:text-primary transition-colors inline-flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors"></span> Soluciones Oncogorro</a></li>
+                    <li><a href="#investigacion" class="text-[1.05rem] text-text-light hover:text-primary transition-colors inline-flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors"></span> I+D</a></li>
+                    <li><a href="#faq" class="text-[1.05rem] text-text-light hover:text-primary transition-colors inline-flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors"></span> Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="lg:col-span-4 flex flex-col gap-5">
+                <h4 class="text-sm font-bold text-text uppercase tracking-widest mb-2 font-heading">Contacto</h4>
+                <div class="flex flex-col gap-6">
+                    <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 text-text-light hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <i class="ph-fill ph-phone-call text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-text-light/70 uppercase tracking-wider mb-1">Llámanos o escríbenos</p>
+                            <p class="font-medium text-[1.1rem]">+51 948 096 075</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:contacto@oncogorroperu.com" class="flex items-start gap-4 text-text-light hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                            <i class="ph-fill ph-envelope-simple text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-text-light/70 uppercase tracking-wider mb-1">Correo Electrónico</p>
+                            <p class="font-medium text-[1.1rem]">contacto@oncogorroperu.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="text-center pt-8 border-t border-black/5 text-sm text-text-light flex flex-col gap-2">
-        <p>&copy; 2026 Oncogorro. Todos los derechos reservados. RUC: 20615282961</p>
+
+        <div class="pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[0.95rem] text-text-light">
+            <p>&copy; 2026 Oncogorro. Todos los derechos reservados.</p>
+            <p class="bg-bg px-4 py-1.5 rounded-full text-xs font-medium tracking-wide">RUC: 20615282961</p>
+        </div>
     </div>
 </footer>
