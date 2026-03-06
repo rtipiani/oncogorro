@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Enfoque especializado en el cuidado capilar oncológico. Desarrolladores de gorros oncológicos terapéuticos para quimioterapia." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Phosphor Icons -->
+		<script is:inline src="https://unpkg.com/@phosphor-icons/web"></script>
+	</head>
+	<body>
+		<slot />
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				// Smooth Scrolling for Anchors
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function(e) {
+						e.preventDefault();
+						const targetId = this.getAttribute('href');
+						if(!targetId || targetId === '#') return;
+						
+						const targetElement = document.querySelector(targetId);
+						if(targetElement) {
+							targetElement.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start'
+							});
+						}
+					});
+				});
+
+				// Intersection Observer for scroll animations
+				const observerOptions = {
+					root: null,
+					rootMargin: '0px',
+					threshold: 0.15
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('visible');
+						}
+					});
+				}, observerOptions);
+
+				const fadeElements = document.querySelectorAll('.fade-up');
+				fadeElements.forEach(el => observer.observe(el));
+				
+				// Initial trigger for elements already in viewport
+				setTimeout(() => {
+					const topElements = document.querySelectorAll('.hero .fade-up');
+					topElements.forEach(el => el.classList.add('visible'));
+				}, 100);
+			});
+		</script>
+	</body>
+</html>

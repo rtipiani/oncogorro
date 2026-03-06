@@ -1,0 +1,36 @@
+---
+---
+<section class="min-h-screen pt-[120px] pb-[60px] px-[5%] grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-[1200px] mx-auto items-center text-center lg:text-left hero" id="inicio">
+    <div class="max-w-[600px] mx-auto lg:mx-0">
+        <span class="fade-up inline-block px-4 py-2 bg-primary-light text-primary-dark rounded-full text-sm font-semibold tracking-wider uppercase mb-6">Compañía y Bienestar</span>
+        <h1 class="fade-up delay-[100ms] text-[clamp(2.5rem,5vw,4.5rem)] tracking-tight leading-tight">Cuidamos tu cabello, <br><span class="highlight">protegemos tu fuerza.</span></h1>
+        <p class="fade-up delay-[200ms] mt-6 mb-10 text-[1.25rem] text-text-light leading-relaxed">Desarrolladores de gorros oncológicos terapéuticos para quimioterapia. Acompañamos tu tratamiento cuidando tu cabello y tu autoestima.</p>
+        <div class="fade-up delay-[300ms] flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a href="#especialidad" class="btn btn-primary">Descubrir Más</a>
+            <a href="#beneficios" class="btn btn-secondary">Ver Beneficios</a>
+        </div>
+    </div>
+    <div class="relative fade-up delay-[400ms] flex justify-center w-full">
+        <!-- Removed overflow-hidden from glass-panel so absolute badges can break out freely -->
+        <div class="glass-panel relative p-4 bg-white/70">
+            <img src="/assets/hero_model.png" alt="Mujer sonriendo usando un gorro oncológico" class="rounded-[16px] w-[90%] md:w-full max-w-[450px] mx-auto h-auto object-cover aspect-[4/5] relative z-10">
+            <!-- Ensure badges have a higher z-index to stay above the image and container -->
+            <div class="absolute top-8 -right-4 lg:-right-10 bg-white/95 backdrop-blur-md px-5 py-3 rounded-full flex items-center gap-2 font-medium shadow-lg z-20 animate-[float_6s_ease-in-out_infinite_0s] text-text whitespace-nowrap">
+                <i class="ph-fill ph-heart text-primary text-xl"></i>
+                <span>Comodidad Absoluta</span>
+            </div>
+            <div class="absolute bottom-12 -left-4 lg:-left-10 bg-white/95 backdrop-blur-md px-5 py-3 rounded-full flex items-center gap-2 font-medium shadow-lg z-20 animate-[float_6s_ease-in-out_infinite_3s] text-text whitespace-nowrap">
+                <i class="ph-fill ph-shield-check text-primary text-xl"></i>
+                <span>Diseño Terapéutico</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
