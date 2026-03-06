@@ -30,12 +30,17 @@ const { title, description = "Enfoque especializado en el cuidado capilar oncol√
 		<slot />
 		
 		<script>
-			document.addEventListener('DOMContentLoaded', () => {
+			// Define a function to initialize our scripts so we can run them on load
+			function initScripts() {
 				// Smooth Scrolling for Anchors
 				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					anchor.addEventListener('click', function(e) {
+					// Remove existing listeners if any to prevent duplicates during re-renders
+					const newAnchor = anchor.cloneNode(true);
+					anchor.parentNode?.replaceChild(newAnchor, anchor);
+					
+					newAnchor.addEventListener('click', function(e) {
 						e.preventDefault();
-						const targetId = this.getAttribute('href');
+						const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
 						if(!targetId || targetId === '#') return;
 						
 						const targetElement = document.querySelector(targetId);
@@ -44,6 +49,7 @@ const { title, description = "Enfoque especializado en el cuidado capilar oncol√
 								behavior: 'smooth',
 								block: 'start'
 							});
+							history.pushState(null, '', targetId);
 						}
 					});
 				});
@@ -71,7 +77,13 @@ const { title, description = "Enfoque especializado en el cuidado capilar oncol√
 					const topElements = document.querySelectorAll('.hero .fade-up');
 					topElements.forEach(el => el.classList.add('visible'));
 				}, 100);
-			});
+			}
+
+			// Run immediately
+			initScripts();
+			
+			// Also run on DOMContentLoaded just in case
+			document.addEventListener('DOMContentLoaded', initScripts);
 		</script>
 	</body>
 </html>
