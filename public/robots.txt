@@ -1,0 +1,23 @@
+# Robots.txt - Oncogorro
+# Generated for SEO optimization
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git
+Disallow: /node_modules/
+
+# Especific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://oncogorro.com/sitemap.xml
+Sitemap: https://oncogorro.com/sitemap-es.xml
+
+# Crawl delay
+Crawl-delay: 1

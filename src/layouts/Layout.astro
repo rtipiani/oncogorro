@@ -4,27 +4,145 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	keywords?: string;
+	author?: string;
 }
 
-const { title, description = "Enfoque especializado en el cuidado capilar oncológico. Desarrolladores de gorros oncológicos terapéuticos para quimioterapia." } = Astro.props;
+const { 
+	title, 
+	description = "Soluciones de enfriamiento capilar para pacientes oncológicos. Gorros terapéuticos para conservar cabello durante quimioterapia. Acompañamiento especializado.",
+	image = "https://oncogorro.com/assets/hero_model_new.jpg",
+	keywords = "gorros oncológicos, enfriamiento capilar, quimioterapia, alopecia, conservar cabello, gorros fríos, pacientes oncológicos, Perú",
+	author = "Oncogorro"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPage = Astro.url.pathname;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
+		<!-- Meta Tags Esenciales -->
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#5DA5DA" />
+		
+		<!-- SEO Básico -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content={author} />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<link rel="canonical" href={canonicalURL} />
 		
-		<!-- Google Fonts -->
+		<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="es_PE" />
+		<meta property="og:site_name" content="Oncogorro" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		
+		<!-- Preconnect Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		
 		<!-- Phosphor Icons -->
 		<script is:inline src="https://unpkg.com/@phosphor-icons/web"></script>
+		
+		<!-- Google Analytics (reemplaza con tu ID) -->
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script> -->
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json" is:inline>
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Organization",
+						"@id": "https://oncogorro.com",
+						"name": "Oncogorro",
+						"url": "https://oncogorro.com",
+						"logo": "https://oncogorro.com/favicon.svg",
+						"description": "Soluciones de enfriamiento capilar para pacientes oncológicos",
+						"sameAs": [
+							"https://www.instagram.com/oncogorro.peru",
+							"https://www.facebook.com/share/1HNNc1PcAM",
+							"https://wa.me/51948096075"
+						],
+						"contactPoint": {
+							"@type": "ContactPoint",
+							"contactType": "Customer Service",
+							"telephone": "+51-948-096-075",
+							"email": "contacto@oncogorroperu.com",
+							"areaServed": "PE",
+							"availableLanguage": ["es"]
+						},
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "PE",
+							"addressLocality": "Lima"
+						}
+					},
+					{
+						"@type": "LocalBusiness",
+						"@id": "https://oncogorro.com",
+						"name": "Oncogorro",
+						"image": "https://oncogorro.com/assets/hero_model_new.jpg",
+						"description": "Desarrollamos soluciones accesibles de enfriamiento capilar para pacientes oncológicos",
+						"telephone": "+51-948-096-075",
+						"email": "contacto@oncogorroperu.com",
+						"url": "https://oncogorro.com",
+						"priceRange": "$$$",
+						"areaServed": "PE",
+						"openingHoursSpecification": {
+							"@type": "OpeningHoursSpecification",
+							"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+							"opens": "09:00",
+							"closes": "18:00"
+						}
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://oncogorro.com/#website",
+						"url": "https://oncogorro.com",
+						"name": "Oncogorro - Soluciones de Enfriamiento Capilar",
+						"description": "Gorros terapéuticos para conservar cabello durante quimioterapia",
+						"potentialAction": {
+							"@type": "SearchAction",
+							"target": {
+								"@type": "EntryPoint",
+								"urlTemplate": "https://oncogorro.com?q={search_term_string}"
+							},
+							"query-input": "required name=search_term_string"
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<slot />

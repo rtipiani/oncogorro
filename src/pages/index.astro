@@ -7,15 +7,22 @@ import Solutions from '../components/Solutions.astro';
 import Research from '../components/Research.astro';
 import Faq from '../components/Faq.astro';
 import Footer from '../components/Footer.astro';
+import Impact from '../components/Impact.astro';
 ---
 
-<Layout title="Oncogorro | Soluciones para conservar tu cabello">
+<Layout 
+	title="Oncogorro | Gorros Oncológicos de Enfriamiento Capilar para Quimioterapia"
+	description="Soluciones de enfriamiento capilar para conservar cabello durante quimioterapia. Gorros terapéuticos diseñados para pacientes oncológicos. Acompañamiento especializado en Perú."
+	keywords="gorros oncológicos, enfriamiento capilar, quimioterapia, alopecia, conservar cabello, gorros fríos, pacientes oncológicos, terapia capilar, Perú"
+	image="https://oncogorro.com/assets/hero_model_new.jpg"
+>
 	<Navbar />
-	<main>
+	<main id="main-content">
 		<Hero />
 		<History />
 		<Solutions />
 		<Research />
+		<Impact />
 		<Faq />
 	</main>
 	<Footer />
