@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 
 interface Props {
 	title: string;
@@ -147,6 +148,7 @@ const currentPage = Astro.url.pathname;
 	</head>
 	<body>
 		<slot />
+		<WhatsAppButton />
 		
 		<script>
 			// Define a function to initialize our scripts so we can run them on load

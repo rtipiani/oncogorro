@@ -5,17 +5,17 @@
 
 <nav class="fixed top-0 left-0 w-full h-[80px] z-50 transition-all duration-300" id="navbar" aria-label="Navegación principal">
     <div class="max-w-[1200px] mx-auto px-[5%] h-full flex justify-between items-center">
-        <a href="/" class="logo text-text flex items-center gap-1 text-3xl font-heading font-semibold tracking-tight" aria-label="Oncogorro - Inicio">
+        <a href="/" class="logo text-text flex items-center gap-1 text-3xl font-heading font-semibold tracking-tight hover:no-underline" aria-label="Oncogorro - Inicio">
             <span class="text-[#A5C94B]">Onco</span><span class="font-bold text-[#5DA5DA] drop-shadow-sm">gorro</span>
         </a>
         <div class="nav-links hidden lg:flex gap-10">
-            <a href="#inicio" class="font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Inicio</a>
-            <a href="#historia" class="font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Historia</a>
-            <a href="#soluciones" class="font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Soluciones</a>
-            <a href="#investigacion" class="font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">I+D</a>
-            <a href="#faq" class="font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">FAQ</a>
+            <a href="#inicio" class="nav-link font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full hover:no-underline [&.active]:after:w-full [&.active]:text-primary">Inicio</a>
+            <a href="#historia" class="nav-link font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full hover:no-underline [&.active]:after:w-full [&.active]:text-primary">Historia</a>
+            <a href="#soluciones" class="nav-link font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full hover:no-underline [&.active]:after:w-full [&.active]:text-primary">Soluciones</a>
+            <a href="#investigacion" class="nav-link font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full hover:no-underline [&.active]:after:w-full [&.active]:text-primary">I+D</a>
+            <a href="#faq" class="nav-link font-medium text-text-light hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full hover:no-underline [&.active]:after:w-full [&.active]:text-primary">FAQ</a>
         </div>
-        <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="btn btn-outline hidden lg:inline-flex">Contáctanos</a>
+        <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="btn btn-outline hidden lg:inline-flex hover:no-underline">Contáctanos</a>
         <button class="menu-toggle lg:hidden bg-transparent border-none text-2xl text-text cursor-pointer" aria-label="Abrir menú de navegación" aria-expanded="false">
             <i class="ph ph-list" aria-hidden="true"></i>
         </button>
@@ -24,12 +24,12 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu absolute top-[80px] left-0 w-full bg-white/98 backdrop-blur-xl shadow-xl border-t border-black/5 lg:hidden opacity-0 pointer-events-none -translate-y-4 transition-all duration-300 ease-in-out z-40" id="mobile-menu">
         <div class="px-[5%] py-8 flex flex-col gap-6">
-            <a href="#inicio" class="font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5">Inicio</a>
-            <a href="#historia" class="font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5">Historia</a>
-            <a href="#soluciones" class="font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5">Soluciones</a>
-            <a href="#investigacion" class="font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5">I+D</a>
-            <a href="#faq" class="font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5">FAQ</a>
-            <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-center mt-4">Contáctanos</a>
+            <a href="#inicio" class="nav-link font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5 hover:no-underline [&.active]:text-primary [&.active]:border-primary">Inicio</a>
+            <a href="#historia" class="nav-link font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5 hover:no-underline [&.active]:text-primary [&.active]:border-primary">Historia</a>
+            <a href="#soluciones" class="nav-link font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5 hover:no-underline [&.active]:text-primary [&.active]:border-primary">Soluciones</a>
+            <a href="#investigacion" class="nav-link font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5 hover:no-underline [&.active]:text-primary [&.active]:border-primary">I+D</a>
+            <a href="#faq" class="nav-link font-medium text-text hover:text-primary transition-colors py-2 border-b border-black/5 hover:no-underline [&.active]:text-primary [&.active]:border-primary">FAQ</a>
+            <a href="https://wa.me/51948096075" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-center mt-4 hover:no-underline">Contáctanos</a>
         </div>
     </div>
 </nav>
@@ -90,6 +90,32 @@
                 if (menuToggle) menuToggle.innerHTML = '<i class="ph ph-list" aria-hidden="true"></i>';
             }
         });
+
+        // Intersection Observer for Active State
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
     });
 </script>
 
